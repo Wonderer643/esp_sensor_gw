@@ -1,0 +1,20 @@
+version: '3'
+services:
+  esp_sensor_gw:
+    container_name: esp_sensor_gw
+    build:
+      context: ./esp_sensor_gw 
+    restart: always
+    network_mode: host
+    privileged: true
+    environment:
+      ZBX_SERVER_HOST: zabbix-server
+      BLE_DEVICE: 0
+      SENSOR_NAME: 'ESP_S'
+      SCAN_TIME: 3.0
+      WAIT_NOTIFY_TIME: 10.0
+      MQTT_HOST: '192.168.2.50'
+      MQTT_PORT: 1883
+      MQTT_TIMEOUT: 60
+      MQTT_MAIN_TOPIC: 'sensors'
+
