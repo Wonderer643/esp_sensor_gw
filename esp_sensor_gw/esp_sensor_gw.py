@@ -85,7 +85,7 @@ def processNotification(handle,data):
 def decodeData(data,format):
     switcher = {
         1:lambda:struct.unpack('?',data[:1])[0],                                             #Boolean. Read only first byte in case format is wrong
-        2:lambda:struct.unpack('B',data[:1])[0] & 0x02 ,                                     #unsigned 2-bit integer
+        2:lambda:struct.unpack('B',data[:1])[0] & 0x03 ,                                     #unsigned 2-bit integer
         3:lambda:struct.unpack('B',data[:1])[0] & 0x0f ,                                     #unsigned 4-bit integer
         4:lambda:struct.unpack('B',data[:1])[0] ,                                            #unsigned 8-bit integer
         5:lambda:struct.unpack('H',data[:2])[0] & 0x0fff,                                    #unsigned 12-bit integer
