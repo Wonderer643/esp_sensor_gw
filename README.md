@@ -7,6 +7,6 @@ On connect get list of characteristics and descriptors, then subscribe to BLE no
 On data receive format the data according to the Characteristic Presentation Format descriptor and output to the MQTT broker as JSON data.
 MQTT topic is build as "sensor/<Device_Address>/<Service_UUID>/<Characteristic_UUID>"
 
-Runs as a standalone script. Also a Dockerfile provide, to run as docker image.
+Run as a standalone script. Also a Dockerfile provide, to run as docker image.
 
 Supports reconnect both to the BLE devices and MQTT broker. 
