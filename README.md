@@ -1,6 +1,6 @@
 # esp_sensor_gw
 
-Python based simlpe BLE->MQTT gateway for scanning the nearby devices and connecct to them in case name pattern match.
+Python based simlpe BLE->MQTT gateway for scanning the nearby devices and connect to them in case name pattern match.
 
 On connect get list of characteristics and descriptors, then subscribe to BLE notifications.
 
